@@ -28,7 +28,7 @@ jobs:
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/versionamento-automatico:${{ github.ref_name }}
 
       - name: Update latest tag
-        uses: silverlyra/latest-image-action
+        uses: silverlyra/latest-image-action@v0.1.0
         with:
           repository: ${{ secrets.DOCKERHUB_USERNAME }}/versionamento-automatico
           candidate-tag: ${{ github.ref_name }}
